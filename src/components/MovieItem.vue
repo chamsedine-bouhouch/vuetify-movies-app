@@ -2,7 +2,7 @@
   <v-card>
     <router-link
       class="text-decoration-none"
-      :to="{ name: 'MovieDetail', params: { title: movie.Title } }"
+      :to="{ name: 'Movie Details', params: { title: movie.Title } }"
     >
       <v-img
         :src="movie.Poster"

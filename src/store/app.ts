@@ -12,7 +12,6 @@ export const useAppStore = defineStore("app", {
   getters: {
     getPath: () => import.meta.env,
   },
-  // axios.get('https://www.omdbapi.com/?i=tt3896198&apikey=db5b718d')
   actions: {
     // single movie
     async getMovie(title: string) {
@@ -26,8 +25,8 @@ export const useAppStore = defineStore("app", {
         });
     },
     // search
-    searchMovies(title: string) {
-      axios
+    async searchMovies(title: string) {
+      await axios
         .get(`https://www.omdbapi.com/?s=${title}&apikey=${Api}`)
         .then((response) => {
           this.movies = response.data.Search;
@@ -41,6 +40,16 @@ export const useAppStore = defineStore("app", {
       axios.post(`${BASE_URl}/movies`, movie).catch((error) => {
         console.log(error);
       });
+    },
+    searchMoviesFavorites() {
+      axios
+        .get(`${BASE_URl}/movies`)
+        .then((response) => {
+          this.favoriteMmovies = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 });

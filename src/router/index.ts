@@ -20,8 +20,13 @@ const routes = [
       },
       {
         path: "/MovieDetail/:title",
-        name: "MovieDetail",
+        name: "Movie Details",
         component: () => import("@/views/MovieDetail.vue"),
+      },
+      {
+        path: "/favorites",
+        name: "Movies Favorites",
+        component: () => import("@/views/MoviesFavorites.vue"),
       },
       /**
        * Auth Routes

@@ -31,7 +31,9 @@
       @blur="searchBoxClosed = true"
     ></v-text-field>
     <template v-slot:append>
-      <v-btn icon="mdi-heart"></v-btn>
+      <router-link class="text-decoration-none text-black"  :to="{ name: 'Movies Favorites' }">
+        <v-btn icon="mdi-heart"></v-btn>
+        </router-link>
 
       <v-menu>
         <template v-slot:activator="{ props }">
