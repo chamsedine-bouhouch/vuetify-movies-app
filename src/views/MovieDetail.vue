@@ -3,13 +3,13 @@
     <v-row dense>
       <v-col cols="12" sm="8" md="7">
         <v-card class="mx-auto my-12" variant="outlined">
-          <v-img cover height="250" :src="store.movie.Poster"></v-img>
+          <v-img cover height="250" :src="movie.Poster"></v-img>
 
           <v-card-item>
-            <v-card-title>{{ store.movie.Title }}</v-card-title>
+            <v-card-title>{{ movie.Title }}</v-card-title>
 
             <v-card-subtitle>
-              <span class="me-1">{{ store.movie.Genre }}</span>
+              <span class="me-1">{{ movie.Genre }}</span>
 
               <v-icon
                 color="error"
@@ -23,9 +23,9 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-row align="left" class="mx-0">
+            <v-row  class="mx-0">
               <v-rating
-                :model-value="store.movie.imdbRating"
+                :model-value="movie.imdbRating"
                 color="amber"
                 density="compact"
                 half-increments
@@ -35,7 +35,7 @@
               ></v-rating>
 
               <div class="text-grey ms-4">
-                {{ store.movie.imdbRating }} ({{ store.movie.imdbVotes }})
+                {{ movie.imdbRating }} ({{ movie.imdbVotes }})
               </div>
             </v-row>
             <v-btn
@@ -54,22 +54,22 @@
         <div class="mx-auto my-12">
           <v-card-item>
             <div>
-              {{ store.movie.Plot }}
+              {{ movie.Plot }}
             </div>
             <v-card-text>
               <div class="my-4 text-subtitle-1">
-                Country: {{ store.movie.Country }}
+                Country: {{ movie.Country }}
               </div>
               <div class="my-4 text-subtitle-1">
-                Released: {{ store.movie.Released }}
+                Released: {{ movie.Released }}
               </div>
               <div class="my-4 text-subtitle-1">
-                Language: {{ store.movie.Language }}
+                Language: {{ movie.Language }}
               </div>
 
               <div class="my-4 text-subtitle-1">List of Actors:</div>
 
-              <li v-for="actor in actors" :key="actor">
+              <li v-for="actor in movie.Actors?.split(',')" :key="actor">
                 {{ actor }}
               </li>
             </v-card-text>
@@ -89,7 +89,7 @@ const { addFavorite } = useMovies();
 const store = useAppStore();
 
 const route = useRoute();
-const actors = computed(() => store.movie.Actors?.split(","));
+const movie = computed(() => store.movie);
 // Get Movie Data
 onMounted(() => {
   store.getMovie(route.params.title);

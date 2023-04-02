@@ -1,20 +1,21 @@
 // Utilities
 import { defineStore } from "pinia";
 import axios from "axios";
+import { Movie } from "@/types/movie";
 const BASE_URl = import.meta.env.VITE_SERVER_BASE_URl;
 const Api = import.meta.env.VITE_APP_OMDB_API_KEY;
 export const useAppStore = defineStore("app", {
   state: () => ({
     movies: [],
-    favoriteMmovies: [],
-    movie: {},
+    favoriteMovies: [],
+    movie: {} as Movie,
   }),
   getters: {
-    getPath: () => import.meta.env,
+    
   },
   actions: {
     // single movie
-    async getMovie(title: string) {
+    async getMovie(title: string|string[]) {
       await axios
         .get(`https://www.omdbapi.com/?t=${title}&apikey=${Api}`)
         .then((response) => {
@@ -45,7 +46,7 @@ export const useAppStore = defineStore("app", {
       axios
         .get(`${BASE_URl}/movies`)
         .then((response) => {
-          this.favoriteMmovies = response.data;
+          this.favoriteMovies = response.data;
         })
         .catch((error) => {
           console.log(error);

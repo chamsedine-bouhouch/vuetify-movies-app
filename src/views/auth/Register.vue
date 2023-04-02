@@ -1,15 +1,4 @@
 <template>
-  <div>Login</div>
+  <div>Register</div>
 </template>
-<script setup lang="ts">
-// import { onMounted } from "vue";
-// import { useRoute } from "vue-router";
-import { useAuthStore } from "@/store/auth";
-const store = useAuthStore();
-
-// const route = useRoute();
-
-onMounted(() => {
-  // 
-});
-</script>
+<script setup lang="ts"></script>

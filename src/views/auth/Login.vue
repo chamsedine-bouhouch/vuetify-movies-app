@@ -45,10 +45,10 @@ const store = useAuthStore();
 const router = useRouter()
 const { handleSubmit, handleReset } = useForm({
   validationSchema: {
-    password(value) {
+    password(value:string) {
       return value ? true : "this field is required";
     },
-    email(value) {
+    email(value:string) {
       if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
 
       return "Must be a valid e-mail.";

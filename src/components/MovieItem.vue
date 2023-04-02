@@ -11,7 +11,7 @@
         height="200px"
         cover
       >
-        <v-card-title class="text-white" v-text="movie.Title"></v-card-title>
+        <v-card-title class="text-white" >{{ movie.Title }}</v-card-title>
       </v-img>
     </router-link>
     <v-card-actions>
@@ -28,9 +28,10 @@
   </v-card>
 </template>
 <script setup lang="ts">
+import useMovies from "../composables/useMovies";
+
 defineProps(["movie"]);
 // composables
-import useMovies from "../composables/useMovies";
 
 const { addFavorite } = useMovies();
 

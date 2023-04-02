@@ -12,6 +12,8 @@
     "sourceMap": false,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "noImplicitAny": false,
+    "skipLibCheck":true,
     "lib": ["esnext", "dom"],
     "types": [
       "node",
@@ -19,7 +21,7 @@
     ],
     "paths": {
       "@/*": ["src/*"]
-    },
+    }
   },
   "include": [
     "src/**/*.ts",
@@ -28,4 +30,5 @@
     "src/**/*.vue",
     "vite.config.ts"
   ]
+
 }
