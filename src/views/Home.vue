@@ -1,8 +1,7 @@
 <template>
- <CardList/>
+  <MoviesList />
 </template>
 
 <script lang="ts" setup>
-import CardList from '@/components/CardList.vue';
-
- </script>
+import MoviesList from "@/components/MoviesList.vue";
+</script>
