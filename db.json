@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "chams@mail.com",
+      "password": "$2a$10$ITB6ZblUni1y7pkX4KPKOu.8nK.SC7ezbw4UV7eAEwZmjHaqnemjS",
+      "firstname": "Chamseddine",
+      "lastname": "Bouhouch",
+      "age": 28,
+      "id": 1
+    }
+  ]
+}

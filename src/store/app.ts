@@ -1,6 +1,7 @@
 // Utilities
 import { defineStore } from "pinia";
 import axios from "axios";
+
 const Api=import.meta.env.VITE_APP_OMDB_API_KEY
 export const useAppStore = defineStore("app", {
   state: () => ({

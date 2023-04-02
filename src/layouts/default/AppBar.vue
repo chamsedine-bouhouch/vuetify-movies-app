@@ -8,7 +8,7 @@
   </v-app-bar> -->
   <v-app-bar :elevation="2">
     <router-link class="text-decoration-none" :to="{ name: 'Home' }">
-      <v-app-bar-title class="text-black">
+      <v-app-bar-title class="text-black ml-4">
         <v-icon icon="mdi mdi-movie-open-play" />
 
         Movies Ninja
@@ -33,7 +33,22 @@
     <template v-slot:append>
       <v-btn icon="mdi-heart"></v-btn>
 
-      <v-btn icon="mdi-dots-vertical"></v-btn>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn icon="mdi-dots-vertical" v-bind="props"></v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item v-if="authstore.isAuthenticated" @click="logout()">
+            <v-list-item-title>Logout</v-list-item-title>
+          </v-list-item>
+          <v-list-item v-else>
+            <v-list-item-title>
+              <router-link class="text-decoration-none text-black" :to="{ name: 'Login' }">Login</router-link>
+              </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </template>
   </v-app-bar>
 </template>
@@ -41,19 +56,29 @@
 <script lang="ts" setup>
 import { ref, computed } from "vue";
 import { useAppStore } from "@/store/app";
-import { useRoute } from "vue-router";
-
+import { useRoute, useRouter } from "vue-router";
+import { useAuthStore } from "@/store/auth";
+// Store
 const store = useAppStore();
+const authstore = useAuthStore();
+// Routes
 const route = useRoute();
+const router = useRouter();
 
 const homePage = computed(() => route.name === "Home");
 
 let searchTitle = ref<string>("");
 
 let searchBoxClosed = ref(true);
+
 function onSearch() {
   console.log("search");
   store.searchMovies(searchTitle.value);
+}
+//
+function logout() {
+  authstore.UserData = {};
+  router.push("/login");
 }
 </script>
 
