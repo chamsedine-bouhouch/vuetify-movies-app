@@ -55,3 +55,9 @@ pnpm lint
 ### Customize configuration
 
 See [Configuration Reference](https://vitejs.dev/config/).
+
+
+### run Json Server
+```
+npm run db:serve
+```
