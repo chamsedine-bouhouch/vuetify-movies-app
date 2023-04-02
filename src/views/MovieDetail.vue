@@ -43,6 +43,7 @@
               color="surface-variant"
               variant="text"
               icon="mdi-heart"
+              @click="addMovie(store.movie)"
             ></v-btn>
           </v-card-actions>
         </v-card>
@@ -82,12 +83,25 @@
 import { onMounted, computed } from "vue";
 import { useRoute } from "vue-router";
 import { useAppStore } from "@/store/app";
+import useMovies from "../composables/useMovies";
+
+const { addFavorite } = useMovies();
 const store = useAppStore();
 
 const route = useRoute();
 const actors = computed(() => store.movie.Actors?.split(","));
-
+// Get Movie Data
 onMounted(() => {
   store.getMovie(route.params.title);
 });
+function addMovie(movie: any) {
+  let FormatedMovie = {
+    Title: movie.Title,
+    Year: movie.Year,
+    imdbID: movie.imdbID,
+    Type: movie.Type,
+    Poster: movie.Poster,
+  };
+  addFavorite(FormatedMovie);
+}
 </script>

@@ -22,43 +22,19 @@
         color="surface-variant"
         variant="text"
         icon="mdi-heart"
-        @click="addFavorite(movie)"
+        @click="addMovie(movie)"
       ></v-btn>
-
-      <!-- <v-btn
-              size="small"
-              color="surface-variant"
-              variant="text"
-              icon="mdi-bookmark"
-            ></v-btn>
-
-            <v-btn
-              size="small"
-              color="surface-variant"
-              variant="text"
-              icon="mdi-share-variant"
-            ></v-btn> -->
     </v-card-actions>
   </v-card>
 </template>
 <script setup lang="ts">
-import { useAppStore } from '@/store/app';
-import { useAuthStore } from '@/store/auth';
-
 defineProps(["movie"]);
-import { ref } from "vue";
+// composables
+import useMovies from "../composables/useMovies";
 
-const store=useAppStore()
-const authtore=useAuthStore()
+const { addFavorite } = useMovies();
 
-// import { Movie } from '../types/movie';
-const favoriteMovie = ref<any>([]);
-function addFavorite(movie:any) {
-
-movie.userId=authtore.UserData.user.id
-  favoriteMovie.value.push(movie );
-  console.table(favoriteMovie.value);
-  store.addFavorite(movie)
-
+function addMovie(movie: any) {
+  addFavorite(movie);
 }
 </script>
