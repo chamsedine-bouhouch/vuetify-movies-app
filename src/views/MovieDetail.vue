@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row dense>
-      <v-col cols="6">
+      <v-col cols="12" sm="8" md="7">
         <v-card class="mx-auto my-12" variant="outlined">
           <v-img cover height="250" :src="store.movie.Poster"></v-img>
 
@@ -10,7 +10,7 @@
 
             <v-card-subtitle>
               <span class="me-1">{{ store.movie.Genre }}</span>
-            
+
               <v-icon
                 color="error"
                 icon="mdi-fire-circle"
@@ -24,20 +24,20 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-row align="left" class="mx-0">
-                <v-rating
-                  :model-value="store.movie.imdbRating"
-                  color="amber"
-                  density="compact"
-                  half-increments
-                  readonly
-                  size="small"
-                  :length="10"
-                ></v-rating>
+              <v-rating
+                :model-value="store.movie.imdbRating"
+                color="amber"
+                density="compact"
+                half-increments
+                readonly
+                size="small"
+                :length="10"
+              ></v-rating>
 
-                <div class="text-grey ms-4">
-                  {{ store.movie.imdbRating }} ({{ store.movie.imdbVotes }})
-                </div>
-              </v-row>
+              <div class="text-grey ms-4">
+                {{ store.movie.imdbRating }} ({{ store.movie.imdbVotes }})
+              </div>
+            </v-row>
             <v-btn
               size="small"
               color="surface-variant"
@@ -49,7 +49,7 @@
       </v-col>
 
       <!-- Card Right -->
-      <v-col cols="6">
+      <v-col cols="12" sm="8" md="5">
         <div class="mx-auto my-12">
           <v-card-item>
             <div>

@@ -8,5 +8,97 @@
       "age": 28,
       "id": 1
     }
+  ],
+  "movies": [
+    {
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "imdbID": "tt2975590",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "Title": "The Walking Dead",
+      "Year": "2010–2022",
+      "imdbID": "tt1520211",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "Title": "Pirates of the Caribbean: Dead Man's Chest",
+      "Year": "2006",
+      "imdbID": "tt0383574",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_SX300.jpg",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "imdbID": "tt2975590",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "imdbID": "tt2975590",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "Title": "The Batman",
+      "Year": "2022",
+      "imdbID": "tt1877830",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "imdbID": "tt2975590",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "Title": "Batman Begins",
+      "Year": "2005",
+      "imdbID": "tt0372784",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "Title": "Batman",
+      "Year": "1989",
+      "imdbID": "tt0096895",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_SX300.jpg",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "Title": "The Batman",
+      "Year": "2022",
+      "imdbID": "tt1877830",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
+      "userId": 1,
+      "id": 10
+    }
   ]
 }
