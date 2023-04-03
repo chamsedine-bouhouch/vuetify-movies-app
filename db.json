@@ -7,6 +7,27 @@
       "lastname": "Bouhouch",
       "age": 28,
       "id": 1
+    },
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$92oY76md4v22yY/g8iiSKu3OrpqkkSCS1bArw5VUjVrp9GE77SDpm",
+      "firstname": "Chamseddine",
+      "lastname": "Bouhouch",
+      "id": 2
+    },
+    {
+      "email": "ad@mail.com",
+      "password": "$2a$10$DxksVXN0YiPT9MofpwV1/O1KZtlK3RakMhhaYpOEkZfSElCErFdn.",
+      "firstname": "Chamseddine",
+      "lastname": "Bouhouch",
+      "id": 3
+    },
+    {
+      "email": "wess@mail.com",
+      "password": "$2a$10$vwN8O8iiDr3c2t1sEJj2ge094gNbFffeTyg4FdIFMifbCD1bBAPoS",
+      "firstname": "Oussema",
+      "lastname": "Ben Taleb",
+      "id": 4
     }
   ],
   "movies": [
@@ -25,98 +46,26 @@
       "imdbID": "tt2975590",
       "Type": "movie",
       "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
+      "userId": 4,
       "id": 2
     },
     {
-      "Title": "The Batman",
-      "Year": "2022",
-      "imdbID": "tt1877830",
+      "Title": "Fast & Furious 6",
+      "Year": "2013",
+      "imdbID": "tt1905041",
       "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg",
       "userId": 1,
       "id": 3
     },
     {
-      "Title": "The Dark Knight",
-      "Year": "2008",
-      "imdbID": "tt0468569",
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "imdbID": "tt2975590",
       "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
-      "userId": 1,
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "userId": 4,
       "id": 4
-    },
-    {
-      "Title": "Batman",
-      "Year": "1989",
-      "imdbID": "tt0096895",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_SX300.jpg",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "Title": "Batman",
-      "Year": "1989",
-      "imdbID": "tt0096895",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_SX300.jpg",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "Title": "Batman v Superman: Dawn of Justice",
-      "Year": "2016",
-      "imdbID": "tt2975590",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "Title": "Batman",
-      "Year": "1989",
-      "imdbID": "tt0096895",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZDNjOGNhN2UtNmNhMC00YjU4LWEzMmUtNzRkM2RjN2RiMjc5XkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_SX300.jpg",
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "Title": "Batman v Superman: Dawn of Justice",
-      "Year": "2016",
-      "imdbID": "tt2975590",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "Title": "Batman v Superman: Dawn of Justice",
-      "Year": "2016",
-      "imdbID": "tt2975590",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "Title": "Batman v Superman: Dawn of Justice",
-      "Year": "2016",
-      "imdbID": "tt2975590",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "Title": "Batman v Superman: Dawn of Justice",
-      "Year": "2016",
-      "imdbID": "tt2975590",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "userId": 1,
-      "id": 12
     }
   ]
 }

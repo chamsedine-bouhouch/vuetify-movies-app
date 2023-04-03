@@ -19,8 +19,14 @@
               label="Password"
             ></v-text-field>
             <v-card-actions>
+              <router-link
+                class="text-decoration-none text-black"
+                :to="{ name: 'Register' }"
+              >
+                <v-btn class="me-4"> Register </v-btn>
+              </router-link>
               <v-spacer></v-spacer>
-              <v-btn class="me-4" type="submit"> submit </v-btn>
+              <v-btn color="primary" class="me-4" type="submit"> submit </v-btn>
 
               <v-btn @click="handleReset"> clear </v-btn>
             </v-card-actions>
@@ -42,13 +48,13 @@ import { useRouter } from "vue-router";
 const store = useAuthStore();
 
 // const route = useRoute();
-const router = useRouter()
+const router = useRouter();
 const { handleSubmit, handleReset } = useForm({
   validationSchema: {
-    password(value:string) {
+    password(value: string) {
       return value ? true : "this field is required";
     },
-    email(value:string) {
+    email(value: string) {
       if (/^[a-z.-]+@[a-z.-]+\.[a-z]+$/i.test(value)) return true;
 
       return "Must be a valid e-mail.";
@@ -61,8 +67,8 @@ const password = useField("password");
 
 const submit = handleSubmit((values) => {
   // alert(JSON.stringify(values, null, 2));
-  store.login(values).then(()=>{
-router.push('/')
+  store.login(values).then(() => {
+    router.push("/");
   });
 });
 onMounted(() => {

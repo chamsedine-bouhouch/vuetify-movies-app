@@ -28,5 +28,16 @@ export const useAuthStore = defineStore("auth", {
           console.log(error);
         });
     },
+    async register(RegisterForm: any) {
+      await axios
+        .post(`${BASE_URl}/register`, RegisterForm)
+        .then((response) => {
+          console.log(response)
+          this.UserData = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 });
