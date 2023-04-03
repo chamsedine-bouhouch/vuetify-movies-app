@@ -6,10 +6,11 @@
 import MoviesList from "@/components/MoviesList.vue";
 import { onMounted } from "vue";
 import { useAppStore } from "@/store/app";
+import { useAuthStore } from "@/store/auth";
 
 const store = useAppStore();
-
+const authStore=useAuthStore()
 onMounted(() => {
-  store.searchMoviesFavorites();
+  store.FavoritesByUser(authStore.UserData.user.id);
 });
 </script>
