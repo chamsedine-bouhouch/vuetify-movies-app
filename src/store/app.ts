@@ -42,7 +42,7 @@ export const useAppStore = defineStore("app", {
         console.log(error);
       });
     },
-    FavoritesByUser(userId:number) {
+    FavoritesByUser(userId) {
       axios
         .get(`${BASE_URl}/users/${userId}/movies`)
         .then((response) => {

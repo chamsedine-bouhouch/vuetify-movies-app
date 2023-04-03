@@ -6,13 +6,8 @@ const BASE_URl = import.meta.env.VITE_SERVER_BASE_URl;
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
+    accessToken: useStorage("accessToken", {}),
     UserData: useStorage("UserData", {}),
-
-    RegisterForm: {},
-    // LoginForm: {
-    //   email: "chams@mail.com",
-    //   password: "bestPassw0rd",
-    // },
   }),
   getters: {
     isAuthenticated: (state) => Object.keys(state.UserData).length !== 0,
@@ -22,7 +17,8 @@ export const useAuthStore = defineStore("auth", {
       await axios
         .post(`${BASE_URl}/login`, LoginForm)
         .then((response) => {
-          this.UserData = response.data;
+          this.UserData = response.data.user;
+          this.accessToken = response.data.accessToken;
         })
         .catch((error) => {
           console.log(error);
@@ -33,7 +29,8 @@ export const useAuthStore = defineStore("auth", {
         .post(`${BASE_URl}/register`, RegisterForm)
         .then((response) => {
           console.log(response)
-          this.UserData = response.data;
+          this.UserData = response.data.user;
+          this.accessToken = response.data.accessToken;
         })
         .catch((error) => {
           console.log(error);

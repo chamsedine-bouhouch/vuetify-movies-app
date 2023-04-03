@@ -80,6 +80,7 @@ function onSearch() {
 //
 function logout() {
   authstore.UserData = {};
+  authstore.accessToken = {};
   router.push("/login");
 }
 </script>
