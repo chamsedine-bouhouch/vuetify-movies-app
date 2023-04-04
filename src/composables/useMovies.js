@@ -9,7 +9,7 @@ const authStore = useAuthStore()
 export default function useMovies() {
   function addFavorite(movie) {
     console.log(store.favoriteMovies.find(movie => movie.imdbID),'txxxt')
-    movie.userId = authStore.UserData.user.id
+    movie.userId = authStore.UserData.id
     store.addFavorite(movie)
   }
   return {
