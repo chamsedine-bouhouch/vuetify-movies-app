@@ -1,16 +1,17 @@
 <template>
   <MoviesList :movies="store.movies" />
+  <Pagination />
 </template>
 
 <script lang="ts" setup>
 import MoviesList from "@/components/MoviesList.vue";
-import { ref, onMounted } from "vue";
+import Pagination from "@/components/Pagination.vue";
 import { useAppStore } from "@/store/app";
+import { onMounted } from "vue";
 
 const store = useAppStore();
 
-let searchTitle = ref<string>("Batman");
 onMounted(() => {
-  store.searchMovies(searchTitle.value);
+  store.searchMovies(store.searchTitle);
 });
 </script>

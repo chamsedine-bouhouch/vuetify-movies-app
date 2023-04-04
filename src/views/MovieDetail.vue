@@ -23,7 +23,7 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-row  class="mx-0">
+            <v-row class="mx-0">
               <v-rating
                 :model-value="movie.imdbRating"
                 color="amber"
@@ -80,20 +80,23 @@
   </v-container>
 </template>
 <script setup lang="ts">
+import useMovies from "../composables/useMovies";
+import { useAppStore } from "@/store/app";
 import { onMounted, computed } from "vue";
 import { useRoute } from "vue-router";
-import { useAppStore } from "@/store/app";
-import useMovies from "../composables/useMovies";
 
 const { addFavorite } = useMovies();
+
 const store = useAppStore();
 
 const route = useRoute();
+
 const movie = computed(() => store.movie);
-// Get Movie Data
+
 onMounted(() => {
   store.getMovie(route.params.title);
 });
+
 function addMovie(movie: any) {
   let FormatedMovie = {
     Title: movie.Title,
